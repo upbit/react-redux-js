@@ -1,2 +1,6 @@
-export const SAVE_FUEL_SAVINGS = 'SAVE_FUEL_SAVINGS';
-export const CALCULATE_FUEL_SAVINGS = 'CALCULATE_FUEL_SAVINGS';
+const ActionTypes = {
+  REQUEST_LOGIN: 'REQUEST_LOGIN',
+  RECEIVE_LOGIN: 'RECEIVE_LOGIN'
+};
+
+module.exports = ActionTypes;

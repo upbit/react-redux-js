@@ -6,7 +6,11 @@ import routes from './routes';
 import configureStore from './store/configureStore';
 import './styles/styles.scss'; //Yep, that's right. You can import SASS/CSS files too! Webpack will run the associated loader and plug this into the page.
 
-const store = configureStore();
+import { applyMiddleware } from 'redux'
+import thunk from 'redux-thunk';
+
+const createStoreWithMW = applyMiddleware(thunk)(configureStore);
+const store = createStoreWithMW();
 
 render(
   <Provider store={store}>

@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import * as actions from '../actions/fuelSavingsActions';
+import { login } from '../actions/authorize';
 
 class MainPage extends Component {
   // static propTypes = {
@@ -20,6 +20,11 @@ class MainPage extends Component {
     return (
       <div>
         Hello World!
+        <button onClick={e => {
+          this.props.dispatch(login('username', 'password'))
+        }}>
+          Login
+        </button>
       </div>
     );
   }
